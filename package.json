@@ -21,6 +21,6 @@
   ],
   "cordovaPlatforms": [],
   "scripts": {
-    "postinstall": "gulp default",
+    "postinstall": "gulp default"
   }
 }
