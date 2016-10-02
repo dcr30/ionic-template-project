@@ -19,5 +19,8 @@
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [],
+  "scripts": {
+    "postinstall": "gulp default",
+  }
 }

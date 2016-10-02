@@ -1,4 +1,5 @@
 {
-  "name": "ionic-boilerplate",
-  "app_id": ""
+	"name": "ionic-boilerplate",
+	"app_id": "",
+	"gulpStartupTasks": ["default"]
 }

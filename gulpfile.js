@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const util = require('gulp-util');
+const exec = require('child_process').exec;
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
@@ -23,11 +24,10 @@ gulp.task('clean', function (callback) {
 	del.sync(BUILD_PATH, callback);
 });
 
-// Копирует manifest.json как есть
 gulp.task('ionic', () => gulp.src(path.join(SOURCE_PATH, 'manifest.json')).pipe(gulp.dest(BUILD_PATH)));
-// Копирует папку lib как есть
+gulp.task('ionic-serve', () => exec('ionic serve', function () {}));
+
 gulp.task('lib', () => gulp.src(paths.lib).pipe(gulp.dest(path.join(BUILD_PATH, 'lib'))));
-// Копирует все файлы .html как есть
 gulp.task('html', () => gulp.src(paths.html).pipe(gulp.dest(BUILD_PATH)));
 
 gulp.task('css', () => {
@@ -61,3 +61,5 @@ gulp.task('watch', () => {
 	gulp.watch([paths.css], options, ['css']);
 	gulp.watch([paths.js], options, ['js']);
 });
+
+gulp.task('serve', ['default', 'ionic-serve','watch']);
