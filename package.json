@@ -18,7 +18,8 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-console@~1.0.4"
   ],
   "cordovaPlatforms": [],
   "scripts": {
