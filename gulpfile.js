@@ -1,4 +1,4 @@
- const gulp = require('gulp');
+const gulp = require('gulp');
 const util = require('gulp-util');
 const exec = require('child_process').exec;
 const babel = require('gulp-babel');
