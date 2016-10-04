@@ -29,6 +29,7 @@ gulp.task('ionic-serve', () => exec('ionic serve', function () {}));
 
 gulp.task('lib', () => gulp.src(paths.lib).pipe(gulp.dest(path.join(BUILD_PATH, 'lib'))));
 gulp.task('html', () => gulp.src(paths.html).pipe(gulp.dest(BUILD_PATH)));
+gulp.task('assets', () => gulp.src(paths.assets).pipe(gulp.dest(path.join(BUILD_PATH, 'assets'))));
 
 gulp.task('css', () => {
 	gulp.src(paths.css)
@@ -53,7 +54,7 @@ gulp.task('js', () => {
     	.pipe(gulp.dest(BUILD_PATH));
 });
 
-gulp.task('default', ['clean', 'ionic', 'lib', 'html', 'css', 'js']);
+gulp.task('default', ['clean', 'ionic', 'lib', 'assets', 'html', 'css', 'js']);
 
 gulp.task('watch', () => {
 	let options = { cwd: './' };
