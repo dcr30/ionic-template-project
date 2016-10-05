@@ -13,7 +13,7 @@ const SOURCE_PATH = './app/';
 
 const paths = {
     js: 	 path.join(SOURCE_PATH, '**/*.js'),
-    css:     path.join(SOURCE_PATH, '**/*.css'),
+    css:     path.join(SOURCE_PATH, 'css/**/*.css'),
     html:    path.join(SOURCE_PATH, '**/*.html'),
     assets:  path.join(SOURCE_PATH, 'assets/**/*'),
     lib:     path.join(SOURCE_PATH, 'lib/**/*'),
